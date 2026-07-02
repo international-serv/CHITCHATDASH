@@ -316,6 +316,14 @@ if (bankSnap.exists()) {
     document.getElementById("linkedNumber").textContent = data.linkedNumber;
     document.getElementById("balance").textContent = data.balance.toFixed(2);
     document.getElementById("transactions").textContent = data.transactions;
+    document.getElementById("infoMessage").textContent = data.information || "";
+
+if (data.informationLink && data.informationLink !== "") {
+    document.getElementById("infoLink").href = data.informationLink;
+    document.getElementById("infoLink").style.display = "inline-block";
+} else {
+    document.getElementById("infoLink").style.display = "none";
+}
 } else {
     alert("Bank account not found.");
 }
