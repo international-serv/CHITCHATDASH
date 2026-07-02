@@ -299,7 +299,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const phone = localStorage.getItem("loggedInUser");
-alert("Logged in user: " + phone);
+
 
 if (!phone) {
     alert("Please log in first.");
